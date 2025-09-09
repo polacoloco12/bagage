@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hittat väska? – Kontakt till ägaren</title>
+  <meta name="description" content="Om du hittat denna väska: kontakta ägaren via telefon eller e‑post." />
+  <style>
+    :root {
+      --bg: #0f172a;        /* slate-900 */
+      --card: #111827;      /* gray-900 */
+      --text: #e5e7eb;      /* gray-200 */
+      --muted: #9ca3af;     /* gray-400 */
+      --accent: #60a5fa;    /* blue-400 */
+      --accent-2: #34d399;  /* emerald-400 */
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 70% -10%, #1f2937 0%, var(--bg) 40%), var(--bg);
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .card {
+      width: min(720px, 100%);
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+      backdrop-filter: blur(6px);
+      padding: 28px 24px;
+    }
+    h1 { font-size: clamp(22px, 5vw, 34px); margin: 0 0 8px; }
+    p.lead { color: var(--muted); margin-top: 0; margin-bottom: 20px; }
+    .info { display: grid; gap: 10px; margin: 18px 0 10px; }
+    a.btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      transition: transform .06s ease, background .2s ease, border-color .2s ease;
+      font-weight: 600;
+      margin-right: 10px;
+    }
+    a.btn:hover { transform: translateY(-1px); background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.22); }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .meta { color: var(--muted); font-size: 12px; margin-top: 18px; }
+    .badge { font-size: 12px; padding: 4px 8px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); display: inline-block; margin-top: 6px; }
+    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 12px; opacity: .9 }
+    .row { display: grid; gap: 12px; grid-template-columns: 1fr; }
+    @media (min-width: 560px) {
+      .row { grid-template-columns: 1fr 1fr; }
+    }
+    .field { padding: 12px; border-radius: 12px; background: rgba(255,255,255,0.05); border: 1px dashed rgba(255,255,255,0.12) }
+    .label { color: var(--muted); font-size: 12px; }
+    .value { font-size: 16px; margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <h1>Hittat väska?</h1>
+    <p class="lead">Tack för att du scannade koden. Var snäll och kontakta ägaren så snart du kan.</p>
+
+    <section class="row">
+      <div class="field">
+        <div class="label">Ägare</div>
+        <div class="value"><strong>Kim Kristoffersson</strong></div>
+      </div>
+      <div class="field">
+        <div class="label">Telefon</div>
+        <div class="value"><a class="btn" href="tel:+46732055969" aria-label="Ring Kim">Ring: +46 73 205 59 69</a></div>
+      </div>
+      <div class="field">
+        <div class="label">E‑post</div>
+        <div class="value"><a class="btn" href="mailto:Kim.kristoffersson@live.com?subject=Hittad%20v%C3%A4ska&body=Hej%20Kim%2C%20jag%20har%20hittat%20din%20v%C3%A4ska.%20Du%20kan%20ringa%20mig%20p%C3%A5%20%3Cskriv%20ditt%20nummer%20h%C3%A4r%3E." aria-label="Maila Kim">Maila: Kim.kristoffersson@live.com</a></div>
+      </div>
+      <div class="field">
+        <div class="label">Snabb SMS (mobil)</div>
+        <div class="value"><a class="btn" href="sms:+46732055969?&body=Hej%20Kim%2C%20jag%20har%20hittat%20din%20v%C3%A4ska." aria-label="Skicka SMS">SMS till Kim</a></div>
+      </div>
+    </section>
+
+    <div class="actions">
+      <!-- Valfritt: Lägg till kontakt direkt -->
+      <a class="btn" href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3AKristoffersson%3BKim%3B%3B%3B%0AFN%3AKim%20Kristoffersson%0ATEL%3BTYPE%3DCELL%3A%2B46732055969%0AEMAIL%3BTYPE%3DINTERNET%3AKim.kristoffersson%40live.com%0AEND%3AVCARD" download="Kim-Kristoffersson.vcf" aria-label="Ladda ner kontaktkort">Ladda ner kontaktkort (.vcf)</a>
+    </div>
+
+    <p class="badge">Visa inte denna sida för andra än nödvändigt. Endast för återlämning av bagage.</p>
+    <p class="meta">Senast uppdaterad: 9 september 2025 • Om du är Kim: ändra lätt i <span class="kbd">index.html</span> och publicera om.</p>
+  </main>
+</body>
+</html>

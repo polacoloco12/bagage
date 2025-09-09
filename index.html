@@ -1,18 +1,18 @@
 <!doctype html>
-<html lang="sv">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hittat väska? – Kontakt till ägaren</title>
-  <meta name="description" content="Om du hittat denna väska: kontakta ägaren via telefon eller e‑post." />
+  <title>Found luggage? – Contact the owner</title>
+  <meta name="description" content="If you found this luggage, please contact the owner via phone or email." />
   <style>
     :root {
-      --bg: #0f172a;        /* slate-900 */
-      --card: #111827;      /* gray-900 */
-      --text: #e5e7eb;      /* gray-200 */
-      --muted: #9ca3af;     /* gray-400 */
-      --accent: #60a5fa;    /* blue-400 */
-      --accent-2: #34d399;  /* emerald-400 */
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #ffffff; /* White text for contrast */
+      --muted: #d1d5db;
+      --accent: #60a5fa;
+      --accent-2: #34d399;
     }
     html, body { height: 100%; }
     body {
@@ -35,7 +35,6 @@
     }
     h1 { font-size: clamp(22px, 5vw, 34px); margin: 0 0 8px; }
     p.lead { color: var(--muted); margin-top: 0; margin-bottom: 20px; }
-    .info { display: grid; gap: 10px; margin: 18px 0 10px; }
     a.btn {
       display: inline-block;
       text-decoration: none;
@@ -45,7 +44,7 @@
       background: rgba(255,255,255,0.06);
       transition: transform .06s ease, background .2s ease, border-color .2s ease;
       font-weight: 600;
-      margin-right: 10px;
+      color: var(--text);
     }
     a.btn:hover { transform: translateY(-1px); background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.22); }
     .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
@@ -58,40 +57,39 @@
     }
     .field { padding: 12px; border-radius: 12px; background: rgba(255,255,255,0.05); border: 1px dashed rgba(255,255,255,0.12) }
     .label { color: var(--muted); font-size: 12px; }
-    .value { font-size: 16px; margin-top: 4px; }
+    .value { font-size: 16px; margin-top: 4px; color: var(--text); }
   </style>
 </head>
 <body>
   <main class="card" role="main">
-    <h1>Hittat väska?</h1>
-    <p class="lead">Tack för att du scannade koden. Var snäll och kontakta ägaren så snart du kan.</p>
+    <h1>Found luggage?</h1>
+    <p class="lead">Thank you for scanning this code. Please contact the owner as soon as possible.</p>
 
     <section class="row">
       <div class="field">
-        <div class="label">Ägare</div>
+        <div class="label">Owner</div>
         <div class="value"><strong>Kim Kristoffersson</strong></div>
       </div>
       <div class="field">
-        <div class="label">Telefon</div>
-        <div class="value"><a class="btn" href="tel:+46732055969" aria-label="Ring Kim">Ring: +46 73 205 59 69</a></div>
+        <div class="label">Phone</div>
+        <div class="value"><a class="btn" href="tel:+46732055969" aria-label="Call Kim">Call: +46 73 205 59 69</a></div>
       </div>
       <div class="field">
-        <div class="label">E‑post</div>
-        <div class="value"><a class="btn" href="mailto:Kim.kristoffersson@live.com?subject=Hittad%20v%C3%A4ska&body=Hej%20Kim%2C%20jag%20har%20hittat%20din%20v%C3%A4ska.%20Du%20kan%20ringa%20mig%20p%C3%A5%20%3Cskriv%20ditt%20nummer%20h%C3%A4r%3E." aria-label="Maila Kim">Maila: Kim.kristoffersson@live.com</a></div>
+        <div class="label">Email</div>
+        <div class="value"><a class="btn" href="mailto:Kim.kristoffersson@live.com?subject=Found%20luggage&body=Hello%20Kim%2C%20I%20found%20your%20luggage.%20You%20can%20call%20me%20at%20%3Cyour%20number%3E." aria-label="Email Kim">Email: Kim.kristoffersson@live.com</a></div>
       </div>
       <div class="field">
-        <div class="label">Snabb SMS (mobil)</div>
-        <div class="value"><a class="btn" href="sms:+46732055969?&body=Hej%20Kim%2C%20jag%20har%20hittat%20din%20v%C3%A4ska." aria-label="Skicka SMS">SMS till Kim</a></div>
+        <div class="label">Quick SMS (mobile)</div>
+        <div class="value"><a class="btn" href="sms:+46732055969?&body=Hello%20Kim%2C%20I%20found%20your%20luggage." aria-label="Send SMS">SMS to Kim</a></div>
       </div>
     </section>
 
     <div class="actions">
-      <!-- Valfritt: Lägg till kontakt direkt -->
-      <a class="btn" href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3AKristoffersson%3BKim%3B%3B%3B%0AFN%3AKim%20Kristoffersson%0ATEL%3BTYPE%3DCELL%3A%2B46732055969%0AEMAIL%3BTYPE%3DINTERNET%3AKim.kristoffersson%40live.com%0AEND%3AVCARD" download="Kim-Kristoffersson.vcf" aria-label="Ladda ner kontaktkort">Ladda ner kontaktkort (.vcf)</a>
+      <a class="btn" href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3AKristoffersson%3BKim%3B%3B%3B%0AFN%3AKim%20Kristoffersson%0ATEL%3BTYPE%3DCELL%3A%2B46732055969%0AEMAIL%3BTYPE%3DINTERNET%3AKim.kristoffersson%40live.com%0AEND%3AVCARD" download="Kim-Kristoffersson.vcf" aria-label="Download contact card">Download contact card (.vcf)</a>
     </div>
 
-    <p class="badge">Visa inte denna sida för andra än nödvändigt. Endast för återlämning av bagage.</p>
-    <p class="meta">Senast uppdaterad: 9 september 2025 • Om du är Kim: ändra lätt i <span class="kbd">index.html</span> och publicera om.</p>
+    <p class="badge">Do not share this page unnecessarily. For luggage return purposes only.</p>
+    <p class="meta">Last updated: September 9, 2025 • If you are Kim: edit <span class="kbd">index.html</span> and republish.</p>
   </main>
 </body>
 </html>
